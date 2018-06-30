@@ -1,10 +1,26 @@
+   
     <mat-toolbar color="primary">
-      <span>App Name</span>
+      <span>Town of Babylon</span>
       <span class="example-spacer"></span>
-      <button md-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon></button>
+      <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
 
     <mat-menu #appMenu="matMenu">
       <button mat-menu-item> Settings </button>
       <button mat-menu-item> Contact </button>
+    </mat-menu>
+ <br/>
+ 
+  <mat-toolbar color="primary">
+    <button mat-button onclick="window.location.href = '/'" target="_self">Home</button>
+    <button mat-button [matMenuTriggerFor]="residentsMenu" >Residents</button>
+      <button mat-button [matMenuTriggerFor]="businessMenu" >Business</button>
+      <button mat-button [matMenuTriggerFor]="visitorsMenu" >Visitors</button>
+       <button mat-button [matMenuTriggerFor]="governmentMenu" c>Government</button>
+    </mat-toolbar>
+
+    <mat-menu #residentsMenu="matMenu">
+      <button mat-menu-item onclick="window.location.href = https://secure.townofbabylon.com/recreation/wbwsc/webtrac.wsc/wbsplash.html" >Recreation and Parks</button>
+      <a href="https://secure.townofbabylon.com/recreation/wbwsc/webtrac.wsc/wbsplash.html">&nbsp;&nbsp;&nbsp;&nbsp;Restart</a>
+      <button mat-menu-item onclick="http://www.townofbabylon.com/index.aspx?nid=334">Wyandanch Resource Center</button>
     </mat-menu>
