@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" >     
+    <mat-toolbar color="primary" >     
       <span >Town of Babylon</span>
       <span class="example-spacer"></span>
       <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon></button>     
@@ -16,18 +16,18 @@
     </mat-menu>
     
     <br/>
-    <mat-toolbar color="primary">            
-      <button mat-menu-item onclick="window.location.href = '/'" target="_self">Home</button>     
-      <button  mat-menu-item [matMenuTriggerFor]="residentsMenu" >Residents</button>
-      <button mat-menu-item [matMenuTriggerFor]="businessMenu" >Business</button>
-      <button mat-menu-item [matMenuTriggerFor]="visitorsMenu" >Visitors</button>
-       <button mat-menu-item [matMenuTriggerFor]="governmentMenu">Government</button>   
+    <mat-toolbar color="primary">  
+               
+      <button mat-button onclick="window.location.href = '/'" target="_self">Home</button>    
+      <button  mat-button [matMenuTriggerFor]="residentsMenu" >Residents</button>
+      <button mat-button [matMenuTriggerFor]="businessMenu" >Business</button>
+      <button mat-button [matMenuTriggerFor]="visitorsMenu" >Visitors</button>
+       <button mat-button [matMenuTriggerFor]="governmentMenu">Government</button>   
     </mat-toolbar> 
 
      <mat-menu #residentsMenu="matMenu">
-      <button mat-menu-item onclick="window.location.href = https://secure.townofbabylon.com/recreation/wbwsc/webtrac.wsc/wbsplash.html" >Recreation and Parks</button>
-      <a href="https://secure.townofbabylon.com/recreation/wbwsc/webtrac.wsc/wbsplash.html">&nbsp;&nbsp;&nbsp;&nbsp;Restart</a>
-      <button mat-menu-item onclick="http://www.townofbabylon.com/index.aspx?nid=334">Wyandanch Resource Center</button>
+      <button mat-menu-item onClick="window.open('https://secure.townofbabylon.com/recreation/wbwsc/webtrac.wsc/wbsplash.html');" >Parks and Recreation</button>     
+      <button mat-menu-item [matMenuTriggerFor]="wyandanchMenu" >Wyandanch Resource Center</button>
     </mat-menu> 
 
     <mat-menu #visitorsMenu="matMenu">
@@ -59,4 +59,10 @@
     <mat-menu #governmentMenu="matMenu">
     </mat-menu>
    
-  
+
+    <mat-menu #wyandanchMenu="matMenu">
+      <button mat-menu-item onClick="window.open('http://www.townofbabylon.com/index.aspx?NID=334');">Wyandanch  Center</button>
+      <button mat-menu-item onClick="window.open('http://www.townofbabylon.com/index.aspx?NID=335');">Programs and Services</button>
+      <button mat-menu-item onClick="window.open('http://www.townofbabylon.com/index.aspx?NID=336');">Partners and Community Organizations</button>
+    </mat-menu>
+
