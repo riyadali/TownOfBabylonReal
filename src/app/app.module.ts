@@ -1,4 +1,5 @@
-import { NgModule }       from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA }       from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
@@ -23,6 +24,7 @@ import { TransactionService } from './transaction.service';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
+import { CarouselExampleComponent } from './carousel-example/carousel-example.component';
 
 @NgModule({
   imports: [
@@ -37,6 +39,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MDBBootstrapModule.forRoot(),
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -45,6 +48,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -56,7 +60,8 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
     TransactionDetailComponent,
     MainMenuComponent,
     SideNavComponent,
-    ToolBarComponent
+    ToolBarComponent,
+    CarouselExampleComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [TransactionService]
