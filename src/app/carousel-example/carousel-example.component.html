@@ -1,5 +1,22 @@
 <!--Carousel Wrapper-->
+<!--Carousel various forms
+-- Original example from web page https://mdbootstrap.com/angular/advanced/carousel/
 <mdb-carousel [isControls]="true" [animation]="'slide'">
+
+-- Doing a fade instead of a slide (basic thing is you need to add a class to mdb)
+-- as documented on web site https://mdbootstrap.com/angular/advanced/carousel/
+// Fade Animation
+<mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [animation]="'fade'" [interval]="3000">
+
+// Slide Animation
+<mdb-carousel class="carousel slide" [isControls]="true" [animation]="'slide'" [interval]="3000">
+
+However ther fade appears to work better (less jerky) when you use [animation]="'slide'". So the following is what seems to work best for fade
+
+<mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [animation]="'slide'" [interval]="3000">
+--> 
+<mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [animation]="'slide'" [interval]="3000">
+
     <!--First slide-->
     <mdb-slide>
         <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
