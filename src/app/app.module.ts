@@ -25,6 +25,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { CarouselExampleComponent } from './carousel-example/carousel-example.component';
+import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { CarouselExampleComponent } from './carousel-example/carousel-example.co
     MainMenuComponent,
     SideNavComponent,
     ToolBarComponent,
-    CarouselExampleComponent
+    CarouselExampleComponent,
+    SocialIconsComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [TransactionService]
