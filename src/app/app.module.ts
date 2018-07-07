@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
+/* it might be safest to import the routing module last */
 import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }         from './app.component';
