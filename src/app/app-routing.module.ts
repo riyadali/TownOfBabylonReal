@@ -84,7 +84,7 @@ const routes: Routes = [
 
      Notice the odd-looking syntax with loadChildren: first, the path to the module, then #, followed by the module’s class name. This instructs the router that the module should be lazy loaded and tells it where to find the module.
   */
-  { path: 'static_pages', loadChildren: './static_pages/static_pages.module#PagesModule' },
+  { path: 'static_pages', loadChildren: './static_pages/static_pages.module#StaticPagesModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
