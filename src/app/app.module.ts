@@ -27,6 +27,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { CarouselExampleComponent } from './carousel-example/carousel-example.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -64,7 +65,8 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
     SideNavComponent,
     ToolBarComponent,
     CarouselExampleComponent,
-    SocialIconsComponent
+    SocialIconsComponent,
+    PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [TransactionService]
