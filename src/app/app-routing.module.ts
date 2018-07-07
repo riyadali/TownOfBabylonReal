@@ -10,6 +10,8 @@ import { TransactionDetailComponent }  from './transaction-detail/transaction-de
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 */
 import { PageNotFoundComponent }   from './page-not-found/page-not-found.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+
 
 /* routes from the original heroes app ---
 
@@ -84,7 +86,9 @@ const routes: Routes = [
 
      Notice the odd-looking syntax with loadChildren: first, the path to the module, then #, followed by the module’s class name. This instructs the router that the module should be lazy loaded and tells it where to find the module.
   */
-  { path: 'static_pages', loadChildren: './static_pages/static_pages.module#StaticPagesModule' },
+ { path: '', redirectTo: '/static_pages', pathMatch: 'full' },
+ { path: 'dashboard', component: DashboardComponent },
+  { path: 'static_pages', loadChildren: './static-pages/static-pages.module#StaticPagesModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
