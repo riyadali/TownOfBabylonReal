@@ -28,6 +28,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { CarouselExampleComponent } from './carousel-example/carousel-example.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { StandardPageComponent } from './standard-page/standard-page.component';
 
 @NgModule({
   imports: [
@@ -66,7 +67,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ToolBarComponent,
     CarouselExampleComponent,
     SocialIconsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    StandardPageComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [TransactionService]
