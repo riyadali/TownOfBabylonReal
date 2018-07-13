@@ -29,6 +29,9 @@ import { CarouselExampleComponent } from './carousel-example/carousel-example.co
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StandardPageComponent } from './standard-page/standard-page.component';
+
+
+
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-babylon/page-doing-business-in-babylon.component';
 
@@ -72,6 +75,8 @@ import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-ba
     SocialIconsComponent,
     PageNotFoundComponent,
     StandardPageComponent,
+    
+    
     PageHomeComponent,
     PageDoingBusinessInBabylonComponent
   ],
