@@ -13,7 +13,7 @@ import { PageNotFoundComponent }   from './page-not-found/page-not-found.compone
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { StandardPageComponent }   from './standard-page/standard-page.component';
 import { PageHomeComponent }   from './page-home/page-home.component';
-import { DoingBusinessInBabylonComponent }   from './doing-business-in-babylon/doing-business-in-babylon.component';
+import { PageDoingBusinessInBabylonComponent }   from './page-doing-business-in-babylon/page-doing-business-in-babylon.component';
 
 
 
@@ -92,7 +92,7 @@ const routes: Routes = [
   */
  { path: '', redirectTo: '/home', pathMatch: 'full' },
  { path: 'home', component: PageHomeComponent, pathMatch: 'full' },
- { path: 'doing_business_in_babylon', component: DoingBusinessInBabylonComponent, pathMatch: 'full' },
+ { path: 'doing_business_in_babylon', component: PageDoingBusinessInBabylonComponent, pathMatch: 'full' },
  { path: 'standard-page/:id', component: StandardPageComponent },
  { path: 'dashboard', component: DashboardComponent },
   { path: 'static_pages', loadChildren: './static-pages/static-pages.module#StaticPagesModule' },
