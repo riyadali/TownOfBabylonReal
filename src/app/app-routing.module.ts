@@ -12,6 +12,8 @@ import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { PageNotFoundComponent }   from './page-not-found/page-not-found.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { StandardPageComponent }   from './standard-page/standard-page.component';
+import { PageHomeComponent }   from './page-home/page-home.component';
+import { DoingBusinessInBabylonComponent }   from './doing-business-in-babylon/doing-business-in-babylon.component';
 
 
 
@@ -88,8 +90,9 @@ const routes: Routes = [
 
      Notice the odd-looking syntax with loadChildren: first, the path to the module, then #, followed by the module’s class name. This instructs the router that the module should be lazy loaded and tells it where to find the module.
   */
- { path: '', redirectTo: '/standard-page/1', pathMatch: 'full' },
- { path: 'home', redirectTo: '/standard-page/1', pathMatch: 'full' },
+ { path: '', redirectTo: '/home', pathMatch: 'full' },
+ { path: 'home', component: PageHomeComponent, pathMatch: 'full' },
+ { path: 'doing_business_in_babylon', component: DoingBusinessInBabylonComponent, pathMatch: 'full' },
  { path: 'standard-page/:id', component: StandardPageComponent },
  { path: 'dashboard', component: DashboardComponent },
   { path: 'static_pages', loadChildren: './static-pages/static-pages.module#StaticPagesModule' },
