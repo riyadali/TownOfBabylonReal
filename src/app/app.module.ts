@@ -29,6 +29,7 @@ import { CarouselExampleComponent } from './carousel-example/carousel-example.co
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StandardPageComponent } from './standard-page/standard-page.component';
+import { ToolBarScalableComponent } from './tool-bar-scalable/tool-bar-scalable.component';
 
 
 
@@ -71,6 +72,7 @@ import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-ba
     MainMenuComponent,
     SideNavComponent,
     ToolBarComponent,
+    ToolBarScalableComponent,
     CarouselExampleComponent,
     SocialIconsComponent,
     PageNotFoundComponent,
