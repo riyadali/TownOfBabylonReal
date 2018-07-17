@@ -8,7 +8,8 @@
 "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-/* Master Styles */
+/* Master Styles -- commented out because affecting mdboostrap styling
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -48,7 +49,7 @@ button:disabled {
   cursor: auto;
 }
 
-/* Navigation link styles */
+-- Navigation link styles --
 nav a {
   padding: 5px 10px;
   text-decoration: none;
@@ -69,7 +70,7 @@ nav a.active {
   color: #039be5;
 }
 
-/* everywhere else */
+-- everywhere else --
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
