@@ -63,6 +63,9 @@ For v6 applications, assets lives under browser:
               },
               {
                 "input": "node_modules/hammerjs/hammer.min.js"
+              },
+              {
+                "input": "node_modules/popper.js/dist/umd/popper.min.js"
               }
             ]
           },
