@@ -52,6 +52,11 @@
   },
   "defaults": {
     "styleExt": "scss",
+    "serve": {
+      "port": 4444,
+      "host": "10.1.2.3"
+    },
     "component": {}
   }
+  
 }
