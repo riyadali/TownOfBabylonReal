@@ -89,8 +89,7 @@ For v6 applications, assets lives under browser:
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular.io-example:build",
-            "port": 1337
+            "browserTarget": "angular.io-example:build"
           },
           "configurations": {
             "production": {
