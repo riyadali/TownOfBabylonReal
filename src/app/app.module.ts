@@ -1,14 +1,15 @@
 import { NgModule, NO_ERRORS_SCHEMA }       from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule,  ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
-import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { SearchService } from './search.service';
 
 /* it might be safest to import the routing module last */
 import { AppRoutingModule }     from './app-routing.module';
@@ -31,6 +32,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StandardPageComponent } from './standard-page/standard-page.component';
 import { ToolBarScalableComponent } from './tool-bar-scalable/tool-bar-scalable.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 
 
@@ -48,7 +50,11 @@ import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-ba
     MatCardModule,
     MatSidenavModule, 
     MatToolbarModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatAutocompleteModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
@@ -75,6 +81,7 @@ import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-ba
     ToolBarComponent,
     ToolBarScalableComponent,
     FooterComponent,
+    SearchFormComponent,
     CarouselExampleComponent,
     SocialIconsComponent,
     PageNotFoundComponent,
@@ -85,7 +92,7 @@ import { PageDoingBusinessInBabylonComponent } from './page-doing-business-in-ba
     PageDoingBusinessInBabylonComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [TransactionService]
+  providers: [TransactionService, SearchService]
 })
 export class AppModule { }
 
