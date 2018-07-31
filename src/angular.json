@@ -21,9 +21,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            /*
-              In the assets key under apps, you can include any directory you like that you want angular-cli to treat as static. For example, you can declare a folder called static, and serve up static pages from there.
-
+            /* In the assets key under apps, you can include any directory you like that you want angular-cli to treat as static. For example, you can declare a folder called static, and serve up static pages from there.
 For v6 applications, assets lives under browser:
             */
             "assets": [
@@ -50,8 +48,8 @@ For v6 applications, assets lives under browser:
                 "src/styles.scss"             
             ],
             "scripts": [
-                "input": "node_modules/chart.js/dist/Chart.js",
-                "input": "node_modules/hammerjs/hammer.min.js"
+               "node_modules/chart.js/dist/Chart.js",
+               "node_modules/hammerjs/hammer.min.js"
             ]
           },
           "configurations": {
