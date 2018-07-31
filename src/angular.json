@@ -20,10 +20,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            /* In the assets key under apps, you can include any directory you like that you want angular-cli to treat as static. For example, you can declare a folder called static, and serve up static pages from there.
-For v6 applications, assets lives under browser:
-            */
+            "tsConfig": "src/tsconfig.app.json",           
             "assets": [
               {
                 "glob": "favicon.ico",
@@ -101,12 +98,7 @@ For v6 applications, assets lives under browser:
                 "input": "styles.scss"
               }
             ],
-            "scripts": [],
-            /*
-              In the assets key under apps, you can include any directory you like that you want angular-cli to treat as static. For example, you can declare a folder called static, and serve up static pages from there.
-
-For v6 applications, assets lives under browser:
-            */
+            "scripts": [],            
             "assets": [
               {
                 "glob": "favicon.ico",
