@@ -4,7 +4,9 @@ This instruction is from web site https://github.com/angular/angular-cli/blob/ma
 @import "variables";
 @import "../node_modules/font-awesome/scss/font-awesome";
 /* Color scheme for Angular Materials Styling - Menus Sidenavs, Toolbars */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* seems that ~ in nmae could cause problems -- refer to https://github.com/angular/angular-cli/issues/9185 */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 /*"~@angular/material/prebuilt-themes/indigo-pink.css";*/
 /*"~@angular/material/prebuilt-themes/pink-bluegrey.css";*/
 /*"~@angular/material/prebuilt-themes/purple-green.css";*/
