@@ -4,8 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular.io-example": {
-      "root": "",
-      "sourceRoot": "src",
+      "root": "",     
       "projectType": "application",
       "prefix": "app",
       "schematics": {
