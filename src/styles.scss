@@ -2,7 +2,7 @@
 and not an angular-cli.json project.  But may need to configure angular-cli.json project so that stackblitz works
 This instruction is from web site https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/include-font-awesome.md*/
 @import "variables";
-@import "../node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/font-awesome/scss/font-awesome";
 /* Color scheme for Angular Materials Styling - Menus Sidenavs, Toolbars */
 
 /* seems that ~ in nmae could cause problems -- refer to https://github.com/angular/angular-cli/issues/9185 */
