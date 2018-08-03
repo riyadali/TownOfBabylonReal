@@ -1,22 +1,14 @@
-/* Two lines below are for font-awesome.  I'm not really sure that it is needed since this is an angular.json
-and not an angular-cli.json project.  But may need to configure angular-cli.json project so that stackblitz works
-This instruction is from web site https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/include-font-awesome.md*/
-@import "variables";
-@import "~font-awesome/scss/font-awesome";
 /* Color scheme for Angular Materials Styling - Menus Sidenavs, Toolbars */
-
-/* seems that ~ in nmae could cause problems -- refer to https://github.com/angular/angular-cli/issues/9185 */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 
 /*"~@angular/material/prebuilt-themes/indigo-pink.css";*/
 /*"~@angular/material/prebuilt-themes/pink-bluegrey.css";*/
 /*"~@angular/material/prebuilt-themes/purple-green.css";*/
 /*"~@angular/material/prebuilt-themes/deeppurple-amber.css";*/
 
-
+"~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
 /* Master Styles -- commented out because affecting mdboostrap styling
-
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -55,7 +47,6 @@ button:disabled {
   color: #aaa;
   cursor: auto;
 }
-
 -- Navigation link styles --
 nav a {
   padding: 5px 10px;
@@ -76,13 +67,11 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
-
 -- everywhere else --
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
-
+*/
 /*
 Copyright 2017-2018 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
