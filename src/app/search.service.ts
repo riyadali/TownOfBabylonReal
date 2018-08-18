@@ -12,8 +12,11 @@ export class SearchService {
    constructor(private http: HttpClient) {}
 
   search(filter: {name: string} = {name: ''}, page = 1): Observable<IUserResponse> {
-    return this.http.get<IUserResponse>('/api/searchusers')
+     /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
+    return this.http.get<IUserResponse>('/api/searchusers') */
+    return this.http.get<SearchUser[]>('/api/searchusers')
     .pipe(
+      /* original version of tap below -- updated it so that it treats the response as array of SearchUsers 
       tap((response: IUserResponse) => {
         response.results = response.results
           .map(user => new SearchUser(user.id, user.name))
@@ -22,7 +25,14 @@ export class SearchService {
 
         return response;
       })
-      );
+      */
+      tap((users: SearchUser[]) => {
+        let response: IUserResponse;
+        response.results = users
+
+        return response;
+      })
+      ); /* end pipe*/
   }
 
 }
