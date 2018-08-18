@@ -13,7 +13,7 @@ import {Observable} from 'rxjs'
 })
 export class SearchFormComponent implements OnInit {
 
-  filteredUsers: Observable<IUserResponse>;
+  filteredUsers: Observable<SearchUser[]>;
   usersForm: FormGroup;
   
   constructor(private fb: FormBuilder, private searchService: SearchService) {}
