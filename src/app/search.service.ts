@@ -27,10 +27,17 @@ export class SearchService {
       })
       */
       tap((users: SearchUser[]) => {
-        let response: IUserResponse;
-        response.results = users
-
-        return response;
+        /*
+        console.log("filter:")
+        console.log(filter.name)
+        */
+        let temp=users.filter(aUser => aUser.name.includes(filter.name))
+        /*
+        console.log(temp.length)
+        console.log(temp[2].name) 
+        */
+        return temp;   
+        
       })
       ); /* end pipe*/
   }
