@@ -11,7 +11,7 @@ export class SearchService {
 
    constructor(private http: HttpClient) {}
 
-  search(filter: {name: string} = {name: ''}, page = 1): Observable<IUserResponse> {
+  search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchUser[]> {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
     return this.http.get<SearchUser[]>('/api/searchusers')
