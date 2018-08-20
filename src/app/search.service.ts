@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 /* To fix map is not a function from web site https://stackoverflow.com/questions/34515173/angular-http-get-with-typescript-error-http-get-map-is-not-a-function-in-n */ 
-import 'rxjs/add/operator/map'
-import {tap} from 'rxjs/operators';
+/* import 'rxjs/add/operator/map'*/
+import {map, tap} from 'rxjs/operators';
 import {SearchUser, IUserResponse} from './search-user.class'
 
 @Injectable()
