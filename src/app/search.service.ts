@@ -16,7 +16,12 @@ export class SearchService {
   search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchUser[]> {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
-    return this.http.get<SearchUser[]>('/api/searchusers').map(users => users.filter(user => user.name.includes(filter.name))); 
+    /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
+     return this.http.get<SearchUser[]>('/api/searchusers')
+       .pipe(
+              map(users => users.filter(user => user.name.includes(filter.name))
+       )
+     ); 
      /* original version of flow below -- updated it so that it treats the response as array of SearchUsers and filter done directly on
      response array of values
     .pipe(
