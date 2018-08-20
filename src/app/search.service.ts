@@ -14,7 +14,9 @@ export class SearchService {
   search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchUser[]> {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
-    return this.http.get<SearchUser[]>('/api/searchusers')
+    return this.http.get<SearchUser[]>('/api/searchusers').filter(user => user.name.includes(filter.name));
+     /* original version of flow below -- updated it so that it treats the response as array of SearchUsers and filter done directly on
+     response array of values
     .pipe(
       /* original version of tap below -- updated it so that it treats the response as array of SearchUsers 
       tap((response: IUserResponse) => {
@@ -24,22 +26,11 @@ export class SearchService {
           .filter(user => user.name.includes(filter.name))
 
         return response;
-      })
+      }) -- end tap
+      
+     
+      );  -- end pipe
       */
-      tap((users: SearchUser[]) => {
-        /*
-        console.log("filter:")
-        console.log(filter.name)
-        */
-        let temp=users.filter(aUser => aUser.name.includes(filter.name))
-        /*
-        console.log(temp.length)
-        console.log(temp[2].name) 
-        */
-        return temp;   
-        
-      })
-      ); /* end pipe*/
   }
 
 }
