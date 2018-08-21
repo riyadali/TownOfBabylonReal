@@ -18,8 +18,12 @@ export class SearchService {
     return this.http.get<IUserResponse>('/api/searchusers') */
     /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
      return this.http.get<SearchDoc[]>('/api/searchdocs')
-       .pipe(
+       .pipe(             
+              /* code that is case sensitive
               map(docs => docs.filter(doc => doc.value.includes(filter.name))
+              */
+              /* case insensitive filtering */
+               map(docs => docs.filter(doc => doc.value.toLowerCase().includes(filter.name.toLowerCase()))
        )
      ); 
      /* original version of flow below -- updated it so that it treats the response as array of SearchUsers and filter done directly on
