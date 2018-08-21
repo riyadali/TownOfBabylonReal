@@ -23,7 +23,7 @@ export class SearchFormComponent implements OnInit {
       userInput: null
     })
 
-    this.filteredUsers = this.usersForm.get('userInput').valueChanges
+    this.filteredDocs = this.usersForm.get('userInput').valueChanges
       .pipe(
         debounceTime(300),
         switchMap(value => this.searchService.search({name: value}, 1))
