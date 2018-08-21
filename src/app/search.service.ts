@@ -6,20 +6,20 @@ import {Observable} from 'rxjs';
 /* To fix map is not a function from web site https://stackoverflow.com/questions/34515173/angular-http-get-with-typescript-error-http-get-map-is-not-a-function-in-n */ 
 /* import 'rxjs/add/operator/map'*/
 import {map, tap} from 'rxjs/operators';
-import {SearchUser, IUserResponse} from './search-user.class'
+import {SearchDoc, IUserResponse} from './search-user.class'
 
 @Injectable()
 export class SearchService {
 
    constructor(private http: HttpClient) {}
 
-  search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchUser[]> {
+  search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchDoc[]> {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
     /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
-     return this.http.get<SearchUser[]>('/api/searchusers')
+     return this.http.get<SearchDoc[]>('/api/searchdocs')
        .pipe(
-              map(users => users.filter(user => user.name.includes(filter.name))
+              map(docs => docs.filter(doc => doc.value.includes(filter.name))
        )
      ); 
      /* original version of flow below -- updated it so that it treats the response as array of SearchUsers and filter done directly on
