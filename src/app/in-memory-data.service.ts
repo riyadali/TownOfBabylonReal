@@ -33,11 +33,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 4, name: 'Tornado' },
       { id: 5, name: 'Agnosto' }
     ];
-   return {transactions, heroes, 
-   searchusers: {
+   return {transactions, heroes, searchusers
+   /*searchusers: {
       total: searchusers.length,
       results: searchusers
-    }};
+    }*/};
  }
 }
 

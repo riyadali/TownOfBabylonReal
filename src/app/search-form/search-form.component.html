@@ -6,7 +6,10 @@
   <span>Your choice is: {{usersForm.get('userInput').value | json}}</span>
 
   <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <!-- old version; updates since it is a straight array
       <mat-option *ngFor="let user of (filteredUsers | async)?.results" [value]="user">
+       -->
+      <mat-option *ngFor="let user of (filteredUsers | async)" [value]="user">
         <span>{{ user.name }}</span>
         <small> | ID: {{user.id}}</small>
       </mat-option>
