@@ -1,6 +1,6 @@
 /* From web site https://itnext.io/using-angular-6-material-auto-complete-with-async-data-6d89501c4b79 */
 import { Component, OnInit } from '@angular/core';
-import {SearchUser, IUserResponse} from '../search-user.class';
+import {SearchDoc, IUserResponse} from '../search-user.class';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {SearchService} from '../search.service';
 import {switchMap, debounceTime} from 'rxjs/operators';
@@ -13,7 +13,7 @@ import {Observable} from 'rxjs'
 })
 export class SearchFormComponent implements OnInit {
 
-  filteredUsers: Observable<SearchUser[]>;
+  filteredDocs: Observable<SearchDoc[]>;
   usersForm: FormGroup;
   
   constructor(private fb: FormBuilder, private searchService: SearchService) {}
@@ -30,8 +30,8 @@ export class SearchFormComponent implements OnInit {
       );
   }
 
-  displayFn(user: SearchUser) {
-    if (user) { return user.name; }
+  displayFn(doc: SearchDoc) {
+    if (doc) { return doc.value; }
   }
 
 }
