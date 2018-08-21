@@ -26,14 +26,13 @@ export class InMemoryDataService implements InMemoryDbService {
      { id: 19, name: 'Magma' },
      { id: 20, name: 'Tornado' }
    ];
-   let searchusers = [
-      { id: 1, name: 'Windstorm' },
-      { id: 2, name: 'Bombasto' },
-      { id: 3, name: 'Magneta' },
-      { id: 4, name: 'Tornado' },
-      { id: 5, name: 'Agnosto' }
+   let searchdocs = [
+      { label: '<span class="autocompleteTitle">GYS  BBCC Garden</span><span class="autocompleteModuleName">Document Center</span>', value: 'GYS  BBCC Garden', link : null },
+      { label: '<span class="autocompleteTitle">Deauville Gardens East</span><span class="autocompleteModuleName">Resource Directory</span>', value: 'Deauville Gardens East', link : null },
+      { label: '<span class="autocompleteTitle">Babylon Gardens</span><span class="autocompleteModuleName">Page</span>', value: 'Babylon Gardens', link : null },
+      { label: '<span class="autocompleteTitle">Can I recycle items found in my garage?</span><span class="autocompleteModuleName">FAQs</span>', value: 'Can I recycle items found in my garage?', link : null }
     ];
-   return {transactions, heroes, searchusers
+   return {transactions, heroes, searchdocs
    /*searchusers: {
       total: searchusers.length,
       results: searchusers
