@@ -16,12 +16,11 @@ export class SearchService {
   search(filter: {name: string} = {name: ''}, page = 1): Observable<SearchDoc[]> {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
-    /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
-     let httpParams = new HttpParams().set('term', 'gar');
-    /* haven't used httpHeaders yet in request; when I try to use it am getting 405 status code ... but set it up  here and
-      may use it in future */
-    let httpHeaders = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-     return this.http.get<SearchDoc[]>('https://www.townofbabylon.com/Search/AutoComplete', {params: httpParams})
+   
+     let httpParams = new HttpParams().set('term', 'gar');    
+     let httpHeaders = new HttpHeaders().set('Accept', 'application/json');
+     /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
+     return this.http.get<SearchDoc[]>('https://www.townofbabylon.com/Search/AutoComplete', {params: httpParams, headers: httpHeaders, , responseType: 'json'})
        .pipe(             
               /* code that is case sensitive
               map(docs => docs.filter(doc => doc.value.includes(filter.name))
