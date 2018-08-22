@@ -1,7 +1,7 @@
 /* From web site https://itnext.io/using-angular-6-material-auto-complete-with-async-data-6d89501c4b79 */
 
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 /* To fix map is not a function from web site https://stackoverflow.com/questions/34515173/angular-http-get-with-typescript-error-http-get-map-is-not-a-function-in-n */ 
 /* import 'rxjs/add/operator/map'*/
@@ -18,6 +18,9 @@ export class SearchService {
     return this.http.get<IUserResponse>('/api/searchusers') */
     /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
      let httpParams = new HttpParams().set('term', 'gar');
+    /* haven't used httpHeaders yet in request; when I try to use it am getting 405 status code ... but set it up  here and
+      may use it in future */
+    let httpHeaders = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
      return this.http.get<SearchDoc[]>('https://www.townofbabylon.com/Search/AutoComplete', {params: httpParams})
        .pipe(             
               /* code that is case sensitive
