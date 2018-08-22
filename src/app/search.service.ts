@@ -1,7 +1,7 @@
 /* From web site https://itnext.io/using-angular-6-material-auto-complete-with-async-data-6d89501c4b79 */
 
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 /* To fix map is not a function from web site https://stackoverflow.com/questions/34515173/angular-http-get-with-typescript-error-http-get-map-is-not-a-function-in-n */ 
 /* import 'rxjs/add/operator/map'*/
@@ -17,7 +17,8 @@ export class SearchService {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
     /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
-     return this.http.get<SearchDoc[]>('/api/searchdocs')
+     let httpParams = new HttpParams().set('term', 'gar');
+     return this.http.get<SearchDoc[]>('https://www.townofbabylon.com/Search/AutoComplete', {httpParams})
        .pipe(             
               /* code that is case sensitive
               map(docs => docs.filter(doc => doc.value.includes(filter.name))
