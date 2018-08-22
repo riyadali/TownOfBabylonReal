@@ -32,7 +32,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { label: '<span class="autocompleteTitle">Babylon Gardens</span><span class="autocompleteModuleName">Page</span>', value: 'Babylon Gardens', link : null },
       { label: '<span class="autocompleteTitle">Can I recycle items found in my garage?</span><span class="autocompleteModuleName">FAQs</span>', value: 'Can I recycle items found in my garage?', link : null }
     ];
-   return {transactions, heroes, searchdocs
+   return {transactions, heroes
    /*searchusers: {
       total: searchusers.length,
       results: searchusers
