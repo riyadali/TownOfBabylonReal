@@ -9,12 +9,9 @@
       <!-- old version; updates since it is a straight array
       <mat-option *ngFor="let user of (filteredUsers | async)?.results" [value]="user">
        -->
-      <mat-option *ngFor="let doc of (filteredDocs | async)" [value]="doc">
-        <!-- old version; note new version string values already includes the span with a class
+      <mat-option *ngFor="let user of (filteredUsers | async)" [value]="user">
         <span>{{ user.name }}</span>
         <small> | ID: {{user.id}}</small>
-        -->
-        <span>{{ doc.value }}</span>      
       </mat-option>
   </mat-autocomplete>
 </form>
