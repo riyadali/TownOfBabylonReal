@@ -1,5 +1,5 @@
-export class SearchDoc {
-  constructor(public label: string, public value: string) {}
+export class SearchUser {
+  constructor(public id: number, public name: string) {}
 }
 
 export interface IUserResponse {
