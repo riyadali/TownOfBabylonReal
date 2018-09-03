@@ -17,10 +17,12 @@ export class SearchService {
      /* original version of http get below -- updated it so that it treats the response as array instead of IUserResponse 
     return this.http.get<IUserResponse>('/api/searchusers') */
    
-     let httpParams = new HttpParams().set('term', 'gar');    
+     let httpParams = new HttpParams().set('term', filter.name);    
      let httpHeaders = new HttpHeaders().set('Accept', 'application/json');
      /* refer to this site on why pipe is needed https://www.academind.com/learn/javascript/rxjs-6-what-changed/ */
-     return this.http.get<SearchDoc[]>('https://www.townofbabylon.com/Search/AutoComplete', {params: httpParams, headers: httpHeaders, responseType: 'json'})
+    /* Note: proxied reference to town of babylon site to enable cross-origin sharing. A path rewrite is done for "/Search". 
+       Refer to comments in project's readme for further details */
+     return this.http.get<SearchDoc[]>('/Search/AutoComplete', {params: httpParams, headers: httpHeaders, responseType: 'json'})
        .pipe(             
               /* code that is case sensitive
               map(docs => docs.filter(doc => doc.value.includes(filter.name))
@@ -38,7 +40,6 @@ export class SearchService {
           .map(user => new SearchUser(user.id, user.name))
           // Not filtering in the server since in-memory-web-api has somewhat restricted api
           .filter(user => user.name.includes(filter.name))
-
         return response;
       }) -- end tap
       
